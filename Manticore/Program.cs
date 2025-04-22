@@ -14,16 +14,19 @@ namespace Manticore
       {
         RoundInformation(manticore, consolas, round);
         GameRound(manticore, consolas, round);
+        if (consolas.GetHealth() <= 0 && manticore.GetHealth() <= 0)
+        {
+          GameOver("Manticore has fallen, but Consolas was lost!");
+          break;
+        }
         if (consolas.GetHealth() <= 0)
         {
-          Console.WriteLine("Consolas has fallen!");
-          Console.ReadKey();
+          GameOver("Consolas has fallen!");
           break;
         }
         if (manticore.GetHealth() <= 0)
         {
-          Console.WriteLine("Manticore has been destoryed!");
-          Console.ReadKey();
+          GameOver("Manticore has been destoryed!");
           break;
         }
         round++;
@@ -83,6 +86,12 @@ namespace Manticore
         return 3;
       }
       return 1;
+    }
+
+    public static void GameOver(string message)
+    {
+      Console.WriteLine(message);
+      Console.ReadKey();
     }
   }
 }
