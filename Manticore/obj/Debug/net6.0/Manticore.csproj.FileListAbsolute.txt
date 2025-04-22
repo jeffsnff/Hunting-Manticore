@@ -1,0 +1,15 @@
+/Users/jeffreyseneff/Dev/manticore/Manticore/bin/Debug/net6.0/Manticore
+/Users/jeffreyseneff/Dev/manticore/Manticore/bin/Debug/net6.0/Manticore.deps.json
+/Users/jeffreyseneff/Dev/manticore/Manticore/bin/Debug/net6.0/Manticore.runtimeconfig.json
+/Users/jeffreyseneff/Dev/manticore/Manticore/bin/Debug/net6.0/Manticore.dll
+/Users/jeffreyseneff/Dev/manticore/Manticore/bin/Debug/net6.0/Manticore.pdb
+/Users/jeffreyseneff/Dev/manticore/Manticore/obj/Debug/net6.0/Manticore.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jeffreyseneff/Dev/manticore/Manticore/obj/Debug/net6.0/Manticore.AssemblyInfoInputs.cache
+/Users/jeffreyseneff/Dev/manticore/Manticore/obj/Debug/net6.0/Manticore.AssemblyInfo.cs
+/Users/jeffreyseneff/Dev/manticore/Manticore/obj/Debug/net6.0/Manticore.csproj.CoreCompileInputs.cache
+/Users/jeffreyseneff/Dev/manticore/Manticore/obj/Debug/net6.0/Manticore.sourcelink.json
+/Users/jeffreyseneff/Dev/manticore/Manticore/obj/Debug/net6.0/Manticore.dll
+/Users/jeffreyseneff/Dev/manticore/Manticore/obj/Debug/net6.0/refint/Manticore.dll
+/Users/jeffreyseneff/Dev/manticore/Manticore/obj/Debug/net6.0/Manticore.pdb
+/Users/jeffreyseneff/Dev/manticore/Manticore/obj/Debug/net6.0/Manticore.genruntimeconfig.cache
+/Users/jeffreyseneff/Dev/manticore/Manticore/obj/Debug/net6.0/ref/Manticore.dll
