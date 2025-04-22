@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Manticore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7034b45aa09f1b459cec557f80c1ec33ecca0f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c6ec9f18d119c3f099384088b6184a36af3f81f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Manticore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Manticore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
