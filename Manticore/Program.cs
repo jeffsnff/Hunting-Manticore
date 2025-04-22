@@ -61,12 +61,14 @@ namespace Manticore
     public static void GameRound(Manticore manticore, City consolas, int round)
     {
       Console.Write("Enter desired cannon range: ");
-      manticore.updateHealth(round, Convert.ToInt32(Console.ReadLine()));
+      int damage = Damage(round);
+      manticore.updateHealth(round, Convert.ToInt32(Console.ReadLine()), damage);
       consolas.UpdateHealth();
     }
 
     public static void RoundInformation(Manticore manticore, City consolas, int round)
     {
+      Console.Clear();
       Console.WriteLine($"Round: {round} City: {consolas} Manticore: {manticore}");
       Console.WriteLine($"The cannon is expected to deal {Damage(round)} damage this round.");
     }

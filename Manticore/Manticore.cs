@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 
 namespace Manticore
 {
@@ -13,7 +14,7 @@ namespace Manticore
       this.range = range;
     }
 
-    public void updateHealth(int round, int distance)
+    public void updateHealth(int round, int distance, int damage)
     {
       if (distance < range)
       {
@@ -27,17 +28,18 @@ namespace Manticore
       }
       if (distance == range)
       {
-        if (round % 3 == 0 && round % 5 == 0)
+        switch (damage)
         {
-          actualHealth = actualHealth - 10;
-          return;
+          case 10:
+            actualHealth = actualHealth - 10;
+            break;
+          case 3:
+            actualHealth = actualHealth - 3;
+            break;
+          default:
+            actualHealth = actualHealth - 1;
+            break;
         }
-        if (round % 3 == 0 || round % 5 == 0)
-        {
-          actualHealth = actualHealth - 3;
-          return;
-        }
-        actualHealth = actualHealth - 1;
       }
     }
 
