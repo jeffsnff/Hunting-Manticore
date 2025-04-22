@@ -6,11 +6,28 @@ namespace Manticore
   {
     static void Main(string[] args)
     {
+      int round = 1;
+      City consolas = new City();
+      Manticore manticore = new Manticore(ChooseDistance());
 
-      int distance = ChooseDistance();
-
-      Manticore manticore = new Manticore(distance);
-      Console.WriteLine(manticore);
+      while (true)
+      {
+        Console.WriteLine($"Round: {round} City: {consolas} Manticore: {manticore}");
+        GameRound(manticore, consolas, round);
+        if (consolas.GetHealth() <= 0)
+        {
+          Console.WriteLine("Consolas has fallen!");
+          Console.ReadKey();
+          break;
+        }
+        if (manticore.GetHealth() <= 0)
+        {
+          Console.WriteLine("Manticore has been destoryed!");
+          Console.ReadKey();
+          break;
+        }
+        round++;
+      }
     }
 
     public static int ChooseDistance()
@@ -26,6 +43,13 @@ namespace Manticore
         }
         return distance;
       }
+    }
+
+    public static void GameRound(Manticore manticore, City consolas, int round)
+    {
+      Console.Write("Enter desired cannon range: ");
+      manticore.updateHealth(round, Convert.ToInt32(Console.ReadLine()));
+      consolas.UpdateHealth();
     }
   }
 }
