@@ -41,14 +41,12 @@ namespace Manticore
     {
       while (true)
       {
+        int distance;
         Console.Write("Player 1 choose a distance for the airship between 1 and 100: ");
-        int distance = Convert.ToInt32(Console.ReadLine());
-        if (distance > 100 || distance < 1)
+        if (int.TryParse(Console.ReadLine(), out distance))
         {
-          Console.WriteLine("Invalid distance.");
-          continue;
+          return distance;
         }
-        return distance;
       }
     }
 
@@ -60,10 +58,14 @@ namespace Manticore
     /// <param name="round"></param>
     public static void GameRound(Manticore manticore, City consolas, int round)
     {
-      Console.Write("Enter desired cannon range: ");
+      int range;
       int damage = Damage(round);
-      manticore.updateHealth(round, Convert.ToInt32(Console.ReadLine()), damage);
-      consolas.UpdateHealth();
+      Console.Write("Enter desired cannon range: ");
+      if (int.TryParse(Console.ReadLine(), out range))
+      {
+        manticore.updateHealth(round, range, damage);
+        consolas.UpdateHealth();
+      }
     }
 
     public static void RoundInformation(Manticore manticore, City consolas, int round)
