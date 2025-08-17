@@ -19,11 +19,13 @@ namespace Manticore
       if (distance < range)
       {
         Console.WriteLine("The round FELL SHORT of the target!");
+        Console.ReadKey();
         return;
       }
       if (distance > range)
       {
         Console.WriteLine("The round OVERSHOT the target!");
+        Console.ReadKey();
         return;
       }
       if (distance == range)

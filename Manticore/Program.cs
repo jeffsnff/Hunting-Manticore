@@ -39,15 +39,8 @@ namespace Manticore
     /// <returns>distance to calculate if a success</returns>
     public static int ChooseDistance()
     {
-      while (true)
-      {
-        int distance;
-        Console.Write("Player 1 choose a distance for the airship between 1 and 100: ");
-        if (int.TryParse(Console.ReadLine(), out distance))
-        {
-          return distance;
-        }
-      }
+      Random distance = new Random();
+      return distance.Next(100) + 1;
     }
 
     /// <summary>
